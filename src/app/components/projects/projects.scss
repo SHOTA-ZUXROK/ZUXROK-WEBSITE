@@ -1,0 +1,26 @@
+@use '../home/home.scss';
+
+.project-item-paper {
+    margin-bottom: calc(30 / 1920 * 100vw);
+}
+
+.content-area {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: left;
+}
+
+.download-button {
+    background-color: #990000;
+    color: white;
+    padding: calc(20 / 1920 * 100vw) 17.45vw;
+    border: none;
+    border-radius: 0;
+    cursor: pointer;
+    font-size: calc(24 / 1920 * 100vw);
+    margin-top: calc(20 / 1920 * 100vw);
+    font-family: 'PT Serif', serif;
+    position: relative;
+    z-index: 11;
+}

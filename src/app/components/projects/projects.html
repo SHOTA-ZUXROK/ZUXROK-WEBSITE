@@ -1,0 +1,18 @@
+<ng-container *ngFor="let game of games">
+    <div class="paper-container project-item-paper">
+        <div class="paper-top">
+            <div class="title-container">
+                <h2>{{ game.name }}</h2>
+            </div>
+        </div>
+        <div class="decoration-line-between-papers"></div>
+        <div class="paper-middle">
+            <div class="content-area">
+                <p>{{ game.description }}</p>
+                <button class="download-button" (click)="downloadGame(game.downloadLink)">DOWNLOAD</button>
+            </div>
+        </div>
+        <div class="paper-bottom"></div>
+    </div>
+</ng-container>
+<br><br><br>
