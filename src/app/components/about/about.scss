@@ -1,1 +1,6 @@
 @use '../home/home.scss';
+
+:host {
+    display: block;
+    margin-bottom: 5vw;
+}

@@ -9,11 +9,10 @@
         <div class="paper-middle">
             <div class="content-area">
                 <p>{{ item.description }}</p>
-                <div class="gallery-image-placeholder"></div>
+                <div class="gallery-image-placeholder" [ngStyle]="getBackgroundImageStyle(item.imageUrl)"></div>
             </div>
         </div>
         <div class="paper-bottom"></div>
     </div>
     <div *ngIf="!isLast" class="decoration-line-between-papers"></div>
 </ng-container>
-<br><br><br>

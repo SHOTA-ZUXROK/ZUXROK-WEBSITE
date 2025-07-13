@@ -1,5 +1,10 @@
 @use '../home/home.scss';
 
+:host {
+    display: block;
+    margin-bottom: 20vw;
+}
+
 .project-item-paper {
     margin-bottom: calc(30 / 1920 * 100vw);
 }

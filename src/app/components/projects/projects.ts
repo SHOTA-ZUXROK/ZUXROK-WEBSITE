@@ -11,19 +11,9 @@ import { CommonModule } from '@angular/common';
 export class ProjectsComponent {
   games = [
     {
-      name: 'Placeholder 1',
-      description: 'Placeholder Text 1',
-      downloadLink: 'https://drive.google.com/file/d/1Q5XhR-dwLCAG71rklsSVVgWU_9j1-sCg/view?usp=sharing'
-    },
-    {
-      name: 'Placeholder 2',
-      description: 'Placeholder Text 2',
-      downloadLink: 'https://drive.google.com/file/d/1Q5XhR-dwLCAG71rklsSVVgWU_9j1-sCg/view?usp=sharing'
-    },
-    {
-      name: 'Placeholder 3',
-      description: 'Placeholder Text 3',
-      downloadLink: 'https://drive.google.com/file/d/1Q5XhR-dwLCAG71rklsSVVgWU_9j1-sCg/view?usp=sharing'
+      name: 'Game-1 (0.1.0)',
+      description: 'Dive into my very first Unity game! Explore a foundational terrain, encounter an early bear character, and step into the shoes of the player in this initial build!',
+      downloadLink: 'https://drive.google.com/file/d/1oQrEjwF5Yom9lEpnIGBbiCZuJxGdfZgx/view?usp=sharing'
     }
   ];
 

@@ -11,16 +11,15 @@ import { CommonModule } from '@angular/common';
 export class GalleryComponent {
   galleryItems = [
     {
-      title: 'Placeholder 1',
-      description: 'Placeholder Text 1'
-    },
-    {
-      title: 'Placeholder 2',
-      description: 'Placeholder Text 2'
-    },
-    {
-      title: 'Placeholder 3',
-      description: 'Placeholder Text 3'
+      title: 'Game-1 (0.1.0)',
+      description: 'Take a first look at my debut Unity game! This initial version showcases a vibrant terrain, lush trees, and an early encounter with the bear.',
+      imageUrl: '/assets/Picture_1.png'
     }
   ];
+
+  getBackgroundImageStyle(imageUrl: string): Record<string, string> {
+    return {
+      'background-image': `url('${imageUrl}')`
+    };
+  }
 }
