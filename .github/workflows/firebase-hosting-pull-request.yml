@@ -32,8 +32,5 @@ jobs:
         uses: google-github-actions/setup-gcloud@v2
       - name: Install Firebase CLI Globally
         run: npm install -g firebase-tools # Explicitly install firebase-tools globally
-      - name: Set Firebase Project
-        run: gcloud config set project zuxrok-website
       - name: Deploy to Firebase Hosting
-        run: firebase deploy --only hosting
-        # No 'env' block needed here as firebase CLI is now globally installed
+        run: firebase deploy --only hosting --project zuxrok-website # Explicitly specify project ID
