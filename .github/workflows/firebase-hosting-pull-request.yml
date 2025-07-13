@@ -23,12 +23,17 @@ jobs:
       - name: Install Dependencies
         run: npm install
       - name: Build Angular Project
-        run: npm run build -- --configuration production # CORRECTED: This line now has the correct 'npm run build'
+        run: npm run build -- --configuration production
       - name: Authenticate to Google Cloud
         uses: google-github-actions/auth@v2
         with:
           credentials_json: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_ZUXROK_WEBSITE }}
-      - name: Deploy to Firebase Hosting
+      - name: Setup gcloud CLI
         uses: google-github-actions/setup-gcloud@v2
-      - run: gcloud config set project zuxrok-website
-      - run: firebase deploy --only hosting
+      - name: Set Firebase Project
+        run: gcloud config set project zuxrok-website
+      - name: Deploy to Firebase Hosting
+        run: firebase deploy --only hosting
+        env:
+          # Add node_modules/.bin to PATH so firebase CLI is found
+          PATH: "./node_modules/.bin:$PATH"
