@@ -24,6 +24,13 @@ jobs:
         run: npm install
       - name: Build Angular Project
         run: npm run build -- --configuration production
+      - name: List Built Files for Debugging
+        run: | # Use a multi-line script to list files
+          echo "Contents of dist/Website/browser:"
+          ls -lh dist/Website/browser/ # List files and their sizes
+          echo "Contents of dist/Website/browser/index.html (first 20 lines):"
+          head -n 20 dist/Website/browser/index.html # Show first 20 lines of index.html
+        continue-on-error: true # Allow this step to fail without stopping the workflow
       - name: Authenticate to Google Cloud
         uses: google-github-actions/auth@v2
         with:
@@ -33,4 +40,4 @@ jobs:
       - name: Install Firebase CLI Globally
         run: npm install -g firebase-tools # Explicitly install firebase-tools globally
       - name: Deploy to Firebase Hosting
-        run: firebase deploy --only hosting --project zuxrok-website # Explicitly specify project ID
+        run: firebase deploy --only hosting --project zuxrok-website
