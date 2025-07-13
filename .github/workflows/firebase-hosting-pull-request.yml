@@ -12,7 +12,7 @@ permissions:
   contents: read # Only read access is needed for checkout
 
 jobs:
-  build_and_deploy: # Renamed job for clarity
+  build_and_deploy:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -20,12 +20,18 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '20' # Specify a Node.js version compatible with your Angular project
-      - name: Install Dependencies and Angular CLI
+      - name: Install Dependencies
         run: npm install
       - name: Build Angular Project
-        run: npm run build -- --configuration production # Use npm run build to use local ng
-      - uses: FirebaseExtended/action-hosting-deploy@v0
+        run: npm npm run build -- --configuration production # Corrected 'npm npm' to 'npm run'
+      - name: Authenticate to Google Cloud
+        uses: google-github-actions/auth@v2 # Use Google's official auth action
         with:
-          repoToken: ${{ secrets.GITHUB_TOKEN }}
-          firebaseServiceAccount: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_ZUXROK_WEBSITE }}
-          projectId: zuxrok-website
+          credentials_json: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_ZUXROK_WEBSITE }}
+      - name: Deploy to Firebase Hosting
+        uses: google-github-actions/setup-gcloud@v2 # Setup gcloud CLI
+      - run: gcloud config set project zuxrok-website # Set default project for gcloud
+      - run: firebase deploy --only hosting # Use firebase CLI directly
+        env:
+          # Ensure firebase CLI is available in PATH
+          PATH: "$PATH:$(npm bin)"
