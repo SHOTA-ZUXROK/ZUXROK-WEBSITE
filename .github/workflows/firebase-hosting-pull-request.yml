@@ -10,14 +10,20 @@ on:
 
 permissions:
   contents: read # Only read access is needed for checkout
-  # pull-requests: write # Not needed for direct push deployment
 
 jobs:
   build_and_deploy: # Renamed job for clarity
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - run: npm install && ng build --configuration production
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20' # Specify a Node.js version compatible with your Angular project
+      - name: Install Dependencies and Angular CLI
+        run: npm install
+      - name: Build Angular Project
+        run: npm run build -- --configuration production # Use npm run build to use local ng
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           repoToken: ${{ secrets.GITHUB_TOKEN }}
