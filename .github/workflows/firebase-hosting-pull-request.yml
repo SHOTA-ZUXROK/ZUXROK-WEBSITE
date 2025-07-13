@@ -26,13 +26,6 @@ jobs:
         run: npm run build -- --configuration production
       - name: Rename index.csr.html to index.html
         run: mv dist/Website/browser/index.csr.html dist/Website/browser/index.html
-      - name: List Built Files for Debugging (After Rename)
-        run: |
-          echo "Contents of dist/Website/browser/ (after rename):"
-          ls -lh dist/Website/browser/
-          echo "Contents of dist/Website/browser/index.html (first 20 lines, after rename):"
-          head -n 20 dist/Website/browser/index.html
-        continue-on-error: true
       - name: Authenticate to Google Cloud
         uses: google-github-actions/auth@v2
         with:
