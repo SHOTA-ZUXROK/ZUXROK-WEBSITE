@@ -7,8 +7,9 @@
         </div>
         <div class="decoration-line-between-papers"></div>
         <div class="paper-middle">
-            <div class="content-area">
-                <p>{{ item.content }}</p>
+            <div class="content-area" [style.max-width]="item.isVideo ? '80vw' : null"
+                [style.padding]="item.isVideo ? 'calc(40 / 1920 * 100vw) calc(20 / 1920 * 100vw) calc(20 / 1920 * 100vw) calc(20 / 1920 * 100vw)' : null">
+                <div [innerHTML]="item.content"></div>
                 <p class="news-date"
                     style="color: #9d1818; font-style: italic; font-family: 'PT Serif', serif; font-weight: bold;">{{
                     item.date }}</p>

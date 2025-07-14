@@ -2,5 +2,35 @@
 
 :host {
     display: block;
-    margin-bottom: 20vw;
+    margin-bottom: 5vw;
+}
+
+.content-area {
+    .news-video-embed {
+        width: 100%;
+        aspect-ratio: 16/9;
+        height: auto;
+        border-radius: 0.5rem;
+        margin-bottom: 1rem;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .news-video-text {
+        font-size: calc(18 / 1920 * 100vw);
+        line-height: 1.6;
+        font-family: 'Noto Sans', sans-serif;
+        margin: calc(15 / 1920 * 100vw);
+        color: #000000;
+        text-align: left;
+    }
+}
+
+.news-date {
+    color: #9d1818;
+    font-style: italic;
+    font-family: 'PT Serif', serif;
+    font-weight: bold;
+    margin-top: 1rem;
 }
