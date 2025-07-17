@@ -18,6 +18,25 @@ export class NewsComponent implements OnInit {
   ngOnInit() {
     this.newsItems = [
       {
+        title: 'Introducing LIFEREALM!',
+        date: '7/18/2025',
+        content: this.sanitizer.bypassSecurityTrustHtml(`
+          <img src="assets/LIFEREALM.png" alt="LIFEREALM Logo" style="width: 100%; height: auto; display: block; margin: 0 auto 1rem auto; border-radius: 0.5rem;">
+          <p style="font-size: calc(18 / 1920 * 100vw); line-height: 1.6; font-family: 'Noto Sans', sans-serif; margin: calc(15 / 1920 * 100vw); color: #000000; text-align: left;">
+            I'm excited to introduce my new project: LIFEREALM! This game is being developed to showcase my potential in creating beautiful and immersive game worlds. My aim is to demonstrate how far I can go in crafting a visually stunning and engaging experience, with vibrant terrains, lush grass, and stunning skies. Stay tuned for more updates on LIFEREALM!
+          </p>
+        `)
+      },
+      {
+        title: 'Game-1 Discontinuation',
+        date: '7/18/2025',
+        content: this.sanitizer.bypassSecurityTrustHtml(`
+          <p style="font-size: calc(18 / 1920 * 100vw); line-height: 1.6; font-family: 'Noto Sans', sans-serif; margin: calc(15 / 1920 * 100vw); color: #000000; text-align: left;">
+            An important announcement regarding my previous project, "Game-1." After careful consideration and a deep dive into my true vision, I've made the strategic decision to discontinue development on Game-1. While it was a valuable learning experience, my passion and creative energy are now fully focused elsewhere.
+          </p>
+        `)
+      },
+      {
         title: 'New YouTube Video',
         date: '7/14/2025',
         isVideo: true,
