@@ -18,6 +18,23 @@ export class NewsComponent implements OnInit {
   ngOnInit() {
     this.newsItems = [
       {
+        title: 'New YouTube Video',
+        date: '7/18/2025',
+        isVideo: true,
+        content: this.sanitizer.bypassSecurityTrustHtml(`
+          <iframe
+            style="width: 100%; aspect-ratio: 16/9; height: auto; border-radius: 0.5rem; margin-bottom: 1rem; display: block;"
+            src="https://www.youtube.com/embed/-rL90lQdSi8"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+          <p style="font-size: calc(18 / 1920 * 100vw); line-height: 1.6; font-family: 'Noto Sans', sans-serif; margin: calc(15 / 1920 * 100vw); color: #000000; text-align: left;">
+        Welcome to LIFEREALM, my latest game development project. This video offers a first look at the world I'm building, showcasing its foundational terrains, lush environments, and visual potential. My goal is to push the boundaries of game development, dedicating myself to the boundless spirit of creation and enhancing every detail to its absolute max.
+          </p>
+        `)
+      },
+      {
         title: 'Introducing LIFEREALM!',
         date: '7/18/2025',
         content: this.sanitizer.bypassSecurityTrustHtml(`
