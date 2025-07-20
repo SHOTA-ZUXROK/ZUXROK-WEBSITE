@@ -18,6 +18,15 @@ export class NewsComponent implements OnInit {
   ngOnInit() {
     this.newsItems = [
       {
+        title: 'LIFEREALM Receives a Major Visual Upgrade!',
+        date: '7/20/2025',
+        content: this.sanitizer.bypassSecurityTrustHtml(`
+          <p style="font-size: calc(18 / 1920 * 100vw); line-height: 1.6; font-family: 'Noto Sans', sans-serif; margin: calc(15 / 1920 * 100vw); color: #000000; text-align: left;">
+           Big news for LIFEREALM! We have implemented a fantastic new environment asset, completely revamping the game-visuals. The world is now richer, more detailed, and ready for you to discover its new beauty.
+          </p>
+        `)
+      },
+      {
         title: 'New YouTube Video',
         date: '7/18/2025',
         isVideo: true,

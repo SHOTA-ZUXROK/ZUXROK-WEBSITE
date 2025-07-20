@@ -11,6 +11,11 @@ import { CommonModule } from '@angular/common';
 export class GalleryComponent {
   galleryItems = [
     {
+      title: 'LIFEREALM (0.1.1)',
+      description: 'Big news for LIFEREALM! We have implemented a fantastic new environment asset, completely revamping the game-visuals. The world is now richer, more detailed, and ready for you to discover its new beauty.',
+      imageUrl: 'assets/Picture_3.png'
+    },
+    {
       title: 'LIFEREALM (0.1.0)',
       description: 'Explore the early stages of LIFEREALM, a game designed to showcase beautiful and immersive worlds with vibrant terrains, lush grass, and stunning skies.',
       imageUrl: 'assets/Picture_2.png'
