@@ -12,7 +12,7 @@ export class ProjectsComponent {
   games = [
     {
       name: 'LIFEREALM (0.1.1)',
-      description: 'Big news for LIFEREALM! We have implemented a fantastic new environment asset, completely revamping the game-visuals. The world is now richer, more detailed, and ready for you to discover its new beauty.',
+      description: 'Big news for LIFEREALM! We have implemented a fantastic new environment asset, completely revamping the game visuals. The world is now richer, more detailed, and ready for you to discover its new beauty.',
       downloadLink: 'https://drive.google.com/file/d/1_qHYMcZQyc6vaLlokPTecawejVVz7XoS/view?usp=sharing'
     },
     {
