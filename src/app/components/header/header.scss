@@ -12,7 +12,7 @@
     top: 0;
     left: 0;
     width: 100%;
-    height: 85%;
+    height: 69.2%;
     background-repeat: repeat-x;
     background-size: auto 100%;
     z-index: 1;
@@ -37,7 +37,7 @@
 
 .logo-display-area {
     position: absolute;
-    top: 50%;
+    top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
     width: 25vw;
@@ -47,7 +47,7 @@
     background-repeat: no-repeat;
     background-position: center center;
     z-index: 5;
-    filter: drop-shadow(0 0 calc(25 / 1920 * 100vw) rgba(255, 255, 255, 0.6)) drop-shadow(0 0 calc(30 / 1920 * 100vw) rgba(255, 255, 255, 0.2));
+    filter: drop-shadow(0 0 calc(25 / 1920 * 100vw) rgba(255, 255, 255, 0.541)) drop-shadow(0 0 calc(30 / 1920 * 100vw) rgba(255, 255, 255, 0.541));
 }
 
 .top-left-buttons,
@@ -60,28 +60,28 @@
 }
 
 .top-left-buttons {
-    top: 0.8vw;
-    left: 5vw;
+    top: 0.4vw;
+    left: 7.7vw
 }
 
 .bottom-left-buttons {
-    bottom: 0.9vw;
-    left: 5vw;
+    bottom: 2.7vw;
+    left: 7.7vw
 }
 
 .top-right-buttons {
-    top: 0.8vw;
-    right: 5vw;
+    top: 0.4vw;
+    right: 7.7vw
 }
 
 .bottom-right-buttons {
-    bottom: 0.9vw;
-    right: 5vw;
+    bottom: 2.7vw;
+    right: 7.7vw
 }
 
 .nav-button {
-    width: 9.6vw;
-    height: 4.9vw;
+    width: 8.2vw;
+    height: 4.2vw;
     background-repeat: no-repeat;
     background-size: 100% 100%;
     margin: calc(-1 / 1920 * 100vw) calc(3 / 1920 * 100vw);
