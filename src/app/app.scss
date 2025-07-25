@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Inter:wght@400;700&family=PT+Serif:wght@400;700&display=swap');
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Cinzel', serif;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+.font-inter {
+  font-family: 'Inter', sans-serif;
+}
+
+.font-pt-serif-regular {
+  font-family: 'PT Serif', serif;
+}
+
+section {
+  min-height: 100vh; /* Reverted to min-height: 100vh */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  padding-top: 80px; /* Offset for fixed header */
+}
+
+/* Background colors for sections based on new order - now using solid colors */
+#home { background-color: #400000; } /* Keep existing dark red/brown */
+#gallery { background-color: #1a1a1a; }
+#about { background-color: #222222; }
+#dream { background-color: #1a1a1a; } /* Dream now has min-height: 100vh and py-20 in HTML */
+#available-now { background-color: #303030; } /* Changed to a distinct dark gray */
+
+/* New upper footer background */
+#upper-footer {
+  background-color: #0d0d0d; /* Slightly darker than other sections for distinction */
+}
+
+
+/* Utility to hide scrollbar but keep scroll functionality */
+.hide-scrollbar {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera*/
+}

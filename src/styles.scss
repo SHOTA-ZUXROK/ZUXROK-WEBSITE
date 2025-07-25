@@ -1,1 +1,31 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Inter:wght@400;700&family=PT+Serif:wght@400;700&display=swap');
+
+body {
+  font-family: 'Cinzel', serif;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+.font-inter {
+  font-family: 'Inter', sans-serif;
+}
+
+.font-pt-serif-regular {
+  font-family: 'PT Serif', serif;
+}
+
+section {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+#home { background-color: #400000; } /* Dark red for Fairy Tail feel */
+#projects { background-color: #1a1a1a; }
+#about { background-color: #222222; }
+#dream { background-color: #1a1a1a; }
+#contact { background-color: #222222; }
